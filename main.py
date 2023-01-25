@@ -15,4 +15,4 @@ def create_qr():
     return Response(img_io.read(),content_type="image/png",headers={"Content-Disposition":"attachment;filename=qr.png"})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(threaded=True, port=80)
