@@ -12,7 +12,7 @@ def create_qr():
     img_io = BytesIO()
     qr.save(img_io, 'PNG')
     img_io.seek(0)
-    return Response(img_io.read(),content_type="image/png",headers={"Content-Disposition":"attachment;filename=qr.png"})
+    return Response(img_io.read(),content_type="image/png")
 
 if __name__ == '__main__':
     app.run(threaded=True, port=80)
